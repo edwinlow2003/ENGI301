@@ -75,15 +75,22 @@ operators = {
     "+" : operator.add,
     "-" : operator.sub,
     "*" : operator.mul,
-    "/" : operator.truediv
+    "/" : operator.truediv,
+    ">>": operator.rshift,
+    "<<": operator.lshift,
+    "%": operator.mod,
+    "**": operator.pow
 }
 
-
+# Give support for Python 2 by making input() work in Python 2
+try:
+    input = raw_input
+except NameError:
+    pass
 
 # ------------------------------------------------------------------------
 # Functions
 # ------------------------------------------------------------------------
-
 def get_user_input():
     """ Get input from the user.
         Returns tuple:  (number, number, function) or 
@@ -133,9 +140,12 @@ if __name__ == "__main__":
     while(True):
         (n1, n2, func) = get_user_input()
         
-        if(n1 == None) or (n2 == None) or (func == None):
+        if (n1 == None) or (n2 == None) or (func == None):
             print("Invalid Input")
             break
         
+        if ((func == operator.rshift) or (func == operator.lshift)):
+            n1 = int(n1)
+            n2 = int(n2)
+        
         print(func(n1, n2))
-
