@@ -42,12 +42,15 @@ Before running the code, do the following to install libraries for the SPI Scree
 
 ```
 sudo apt-get update
-sudo python3.8 -m pip install --upgrade Pillow
+sudo python3.8 -m pip install Pillow==9.0.1
 sudo python3.8 -m pip install -U setuptools
 sudo python3.8 -m pip install adafruit-circuitpython-busdevice
 sudo python3.8 -m pip install adafruit-circuitpython-rgb-display
 sudo apt-get install ttf-dejavu -y
 ```
+
+- Note that for spi_screen.py in my code does not work with the newest version of Pillow (10.3.0). For the code to work, install Pillow's version 9.0.1.
+
 
 <br/><br/>
 ## Software Operation Instructions
@@ -65,7 +68,7 @@ If ```sudo ./run``` doesn't work, then type ```chmod 755 run``` to change the pe
 For the project to run automatically on boot, do the following:
 ```
 sudo crontab -e
-@reboot sleep 30 && sh /var/lib/cloud9/ENGI301/project_01/run > /var/lib/cloud9/logs/cronlog 2>&1
+@reboot sleep 30 && bash /var/lib/cloud9/ENGI301/project_01/run > /var/lib/cloud9/logs/cronlog 2>&1
 ```
 Restart the PocketBeagle by running ```sudo reboot``` to make sure that it runs automatically on boot.
 
