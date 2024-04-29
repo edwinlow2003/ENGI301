@@ -72,3 +72,8 @@ sudo crontab -e
 ```
 Restart the PocketBeagle by running ```sudo reboot``` to make sure that it runs automatically on boot.
 
+After autobooting, the code starts running in the background even if the process isn't visible in terminal. To stop the code from running, do the following:
+
+- Run ```ps -ef``` to get the PID of /usr/local/bin/python3.8 morse.py. In my case, the PID is 998.
+- Run ```sudo kill -9 <PID>``` to stop the code in the background. In my case, I ran ```sudo kill -9 998```.
+- To start running the code again, run ```sudo ./run``` as above. 
