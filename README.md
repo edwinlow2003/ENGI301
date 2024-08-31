@@ -1,2 +1,2 @@
 # ENGI301
-Repository for ENGI301 course work
+Repository for ENGI301 projects
