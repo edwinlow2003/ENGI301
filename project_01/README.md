@@ -8,6 +8,9 @@ For the details of the project's hardware setup, please refer to the hackster.io
 
 <br/><br/>
 ## Software Build Instructions
+
+**Note: morse.py is the master code which controls the entire device.**
+
 ### Install Python 3.8.18
 On the PocketBeagle, install Python 3.8.18 to run the libraries that the SPI screen uses. Adafruit updated their adafruit-circuitpython-rgb-display library so that Python 3.7 no longer works on it.
 
