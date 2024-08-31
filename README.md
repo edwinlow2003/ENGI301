@@ -9,4 +9,4 @@ This Morse code transceiver allows users to input Morse code with buttons. Users
 For the details of the project's hardware setup, please refer to the hackster.io page here: https://www.hackster.io/el52/engi-301-pocketbeagle-morse-code-transceiver-c5b2f4
 
 
-For detailed software build instructions, see the README in the project_01 folder.
+For detailed software build instructions, see the README in the project_01 folder. For the project's master code, see morse.py in project_01.
